@@ -16,3 +16,6 @@ This visual summary illustrates the integrated approach adopted in our study. We
 - Windows: `.\env\Scripts\activate`
 - macOS/Linux: `source env/bin/activate`
 5. Install the required packages: pip install -r rfs_requirements.txt
+6. Run the main.py. It tries to combine two datasets make a survival models... csv files...
+
+  RRR... feature extraction...segmentation... not saved models save and load models ...
