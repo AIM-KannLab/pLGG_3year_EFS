@@ -11,27 +11,21 @@ from Evaluation import Eval_auc, Eval_calibration, Eval_cindex, Eval_ibs, Eval_K
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 #load clinical data 
-# cbtn = pd.read_csv('/path_to_clinical_data_cbtn.csv')
-# df_bch = pd.read_csv('/path_to_clinical_data_bch.csv')
-df_bch = pd.read_csv('/media/sdb/Maryam/bch_clinic_200.csv')
-cbtn = pd.read_csv('/media/sdb/Maryam/cbtn23_rfs.csv')
+cbtn = pd.read_csv('/path_to_clinical_data_cbtn.csv')
+df_bch = pd.read_csv('/path_to_clinical_data_bch.csv')
 
 df_combined = pd.concat([df_bch, cbtn], ignore_index=True)
 df_clinic_filtered = df_bch
 df_clinic_cbtn = cbtn
 
 #load MRI image features
-df_sorted_feature = pd.read_csv('/media/sdb/Maryam/features_bch.csv')
-df_sorted_feature_cbtn = pd.read_csv('/media/sdb/Maryam/getnnunet_feature/feat_nnunet_CB23.csv')
-# df_sorted_feature = pd.read_csv('/path_to_image_features_bch.csv')
-# df_sorted_feature_cbtn = pd.read_csv('/path_to_image_features_cbtn.csv')
+df_sorted_feature = pd.read_csv('/path_to_image_features_bch.csv')
+df_sorted_feature_cbtn = pd.read_csv('/path_to_image_features_cbtn.csv')
 df_combined_feature = pd.concat([df_sorted_feature, df_sorted_feature_cbtn], ignore_index=True)
 
 #load the dataframe which have input clinical variables to the model in organized manner (categorized variables have been changed to numbers)
-# twocol_bch = pd.read_csv('path_to_organized_bch.csv')
-# twocol_cbtn = pd.read_csv('path_to_organized_cbtn.csv')
-twocol_bch = pd.read_csv ('/media/sdb/Maryam/surv_anal/bch_for_merging_ageresec.csv')
-twocol_cbtn = pd.read_csv('/media/sdb/Maryam/surv_anal/cbtn_for_merging_ageresec_1.csv')
+twocol_bch = pd.read_csv('path_to_organized_bch.csv')
+twocol_cbtn = pd.read_csv('path_to_organized_cbtn.csv')
 twocol_combined =  pd.concat([twocol_bch, twocol_cbtn], ignore_index=True)
 
 # Stratified three fold cross validation
