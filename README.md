@@ -6,3 +6,13 @@ Pediatric low-grade gliomas (pLGG) are the most prevalent central nervous system
 ![Framework (1)-1](https://github.com/AIM-KannLab/pLGG_3year_RFS/assets/53992619/aa221dab-3cb9-4683-a4d1-4146229c1b8f)
 
 This visual summary illustrates the integrated approach adopted in our study. We combined patient data from the BCH and CBTN cohorts and utilized MRI images alongside clinical variables such as age and resection status. To ensure robustness and reliability, a three-fold cross-validation method was implemented to obtain average accuracy. The process for deriving MRI image features involved a sequence of steps: preprocessing, tumor segmentation, and feature extraction. These features were then processed through fully connected neural layers and integrated with clinical data using a logistic hazard loss function. The outcome of the model is the generation of personalized recurrence-free survival curves, focusing specifically on three-year recurrence outcomes in this study.
+
+## Setting Up the Virtual Environment
+
+1. Clone the repository
+2. Navigate into the directory
+3. Create a virtual environment: python -m venv env
+4. Activate the virtual environment:
+- Windows: `.\env\Scripts\activate`
+- macOS/Linux: `source env/bin/activate`
+5. Install the required packages: pip install -r rfs_requirements.txt
