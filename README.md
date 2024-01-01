@@ -7,6 +7,8 @@ Pediatric low-grade gliomas (pLGG) are the most prevalent central nervous system
 
 This visual summary illustrates the integrated approach adopted in our study. We combined patient data from the BCH and CBTN cohorts and utilized MRI images alongside clinical variables such as age and resection status. To ensure robustness and reliability, a three-fold cross-validation method was implemented to obtain average accuracy. The process for deriving MRI image features involved a sequence of steps: preprocessing, tumor segmentation, and feature extraction. These features were then processed through fully connected neural layers and integrated with clinical data using a logistic hazard loss function. The outcome of the model is the generation of personalized recurrence-free survival curves, focusing specifically on three-year recurrence outcomes in this study.
 
+This repository is for survival part of model which is the violet part. The segmentation part code and docker is located in: https://github.com/AIM-KannLab/pLGG_Segmentation and https://github.com/AIM-KannLab/pLGG_Segmentation_docker. The feature extraction part code is located in: https://github.com/AIM-KannLab/nnUnet_Features.
+
 ## Running python codes
 
 1. Clone the repository
