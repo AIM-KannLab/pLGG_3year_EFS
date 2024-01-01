@@ -24,8 +24,6 @@ auc_bch_cl <- sprintf("%.2f", auc_bch_cl)
 auc_bch_im <- sprintf("%.2f", auc_bch_im)
 auc_bch_imcl <- sprintf("%.2f", auc_bch_imcl)
 
-
-
 # Create a data frame for plotting
 df <- data.frame(
   FPR = c(fpr_bch_cl, fpr_bch_im, fpr_bch_imcl),
@@ -227,15 +225,12 @@ auc_bch <- sprintf("%.2f", auc_bch)
 auc_cbtn <- sprintf("%.2f", auc_cbtn)
 auc_T <- sprintf("%.2f", auc_T)
 
-
-
 # Create a data frame for plotting
 df <- data.frame(
   FPR = c(fpr_bch, fpr_cbtn, fpr_T),
   TPR = c(tpr_bch, tpr_cbtn, tpr_T),
   Model = c(rep("BCH", length(fpr_bch)), rep("CBTN", length(fpr_cbtn)), rep("Total", length(fpr_T)))
 )
-
 
 # Create the ROC curve plot
 roc_plot <- ggplot(df, aes(x = FPR, y = TPR, color = Model)) +
@@ -297,15 +292,12 @@ auc_bch <- sprintf("%.2f", auc_bch)
 auc_cbtn <- sprintf("%.2f", auc_cbtn)
 auc_T <- sprintf("%.2f", auc_T)
 
-
-
 # Create a data frame for plotting
 df <- data.frame(
   FPR = c(fpr_bch, fpr_cbtn, fpr_T),
   TPR = c(tpr_bch, tpr_cbtn, tpr_T),
   Model = c(rep("BCH", length(fpr_bch)), rep("CBTN", length(fpr_cbtn)), rep("Total", length(fpr_T)))
 )
-
 
 # Create the ROC curve plot
 roc_plot <- ggplot(df, aes(x = FPR, y = TPR, color = Model)) +
