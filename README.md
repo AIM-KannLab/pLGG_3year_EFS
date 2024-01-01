@@ -21,4 +21,4 @@ This repository is for survival part of model which is the violet part. The segm
 6. Run the main.py. It tries to combine two datasets make survival models. It loads clinical data and features extracted from MRI images of two cohorts and tries to predict survival probabilities of subjects.
 
 ## R scripts
-R used for visualization of this study. R scripts are in the R folder.
+R was used for depicting plots of this study. R scripts are in the R folder.
