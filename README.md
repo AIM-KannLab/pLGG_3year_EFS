@@ -18,6 +18,4 @@ This repository is for survival part of model which is the violet part. The segm
 - Windows: `.\env\Scripts\activate`
 - macOS/Linux: `source env/bin/activate`
 5. Install the required packages: pip install -r rfs_requirements.txt
-6. Run the main.py. It tries to combine two datasets make a survival models... csv files...
-
-  RRR... feature extraction...segmentation... not saved models save and load models ...
+6. Run the main.py. It tries to combine two datasets make a survival models. It loads clinical data and features extracted from MRI images of two cohorts and tries to predict survival probabilities of subjects.
